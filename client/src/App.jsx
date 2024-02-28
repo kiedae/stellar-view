@@ -8,6 +8,7 @@ import axios from 'axios'
 import { Toaster } from 'react-hot-toast'
 import { UserContextProvider } from '../context/userContext'
 import { HeroSection, Navbar } from './Components/componentsindex'
+import PastApod from './Pages/PastApod'
 
 axios.defaults.baseURL = 'http://localhost:3001'
 axios.defaults.withCredentials = true
@@ -21,6 +22,7 @@ function App() {
       <Route  path = '/' element={<Home />}  />
       <Route  path = '/register' element={<Register />}  />
       <Route  path = '/login' element={<Login />}  />
+      <Route path= '/pastApod' element={<PastApod />} />
     </Routes>   
     </UserContextProvider>
     )
